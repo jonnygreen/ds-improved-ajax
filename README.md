@@ -1,7 +1,15 @@
 ds-improved-ajax
 ==============================================================================
 
-[Short description of the addon.]
+This RFC restores the behavior of the `ds-improved-ajax` feature flag for `ember-data`.
+
+`ember-data` has decided to pursue another direction instead of this proposal,
+and this addon is a temporary offering that will be deprecated once  `ember-data`
+releases an alternative.
+
+This feature allowed users to customize how a request is formed by overwriting
+-  `methodForRequest`, `urlForRequest`, `headersForRequest` and `bodyForRequest`
+-  in adapters extending from `DS.RESTAdapter` and `DS.JSONAPIAdapter`.
 
 Installation
 ------------------------------------------------------------------------------
@@ -14,7 +22,13 @@ ember install ds-improved-ajax
 Usage
 ------------------------------------------------------------------------------
 
-[Longer description of how to use the addon in apps.]
+```js
+import RESTAdapter from 'ds-improved-ajax/adapters/rest';
+```
+
+```js
+import JSONAPIAdapter from 'ds-improved-ajax/adapters/json-api';
+```
 
 
 Contributing
