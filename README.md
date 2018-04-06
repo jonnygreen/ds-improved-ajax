@@ -22,14 +22,60 @@ ember install ds-improved-ajax
 Usage
 ------------------------------------------------------------------------------
 
+Make sure your adapters that depend on this functionality extend from this addon's adapters.  This addon does not change the behavior of `ember-data`'s adapters.
+
+eg change
+
 ```js
+// <APP>/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.RESTAdapter.extend({
+  // ...
+});
+```
+
+to
+
+```js
+// <APP>/adapters/application.js
 import RESTAdapter from 'ds-improved-ajax/adapters/rest';
+
+export default RESTAdapter.extend({
+  // ...
+});
 ```
+
+or change
 
 ```js
-import JSONAPIAdapter from 'ds-improved-ajax/adapters/json-api';
+// <APP>/adapters/application.js
+import DS from 'ember-data';
+
+export default DS.JSONAPIAdapter.extend({
+  // ...
+});
 ```
 
+to
+
+```js
+// <APP>/adapters/application.js
+import JSONAPIAdapter from 'ds-improved-ajax/adapters/json-api';
+
+export default JSONAPIAdapter.extend({
+  // ...
+});
+```
+
+If you do not have an application adapter you can re-export the `json-api` adapter.
+
+```js
+// <APP>/adapters/application.js
+import JSONAPIAdapter from 'ds-improved-ajax/adapters/json-api';
+
+export default JSONAPIAdapter;
+```
 
 Contributing
 ------------------------------------------------------------------------------
