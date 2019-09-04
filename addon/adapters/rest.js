@@ -3,12 +3,12 @@ import { DEBUG } from '@glimmer/env';
 import { run } from '@ember/runloop';
 import { Promise } from 'rsvp';
 import { warn, assert } from '@ember/debug';
+import { parseResponseHeaders } from '@ember-data/adapter/-private';
 
 import {
-  parseResponseHeaders,
   TimeoutError,
   AbortError,
-} from 'ember-data/-private';
+} from '@ember-data/adapter/error';
 
 const ImprovedAjaxRestAdapter = RESTAdapter.extend({
   findRecord(store, type, id, snapshot) {
