@@ -1,3 +1,12 @@
+**THIS ADDON SHOULD NOT BE USED**
+
+This addon is old and dead. It should not be added to any new Ember apps and has been removed from the Ember Desktop in https://github.com/phorest/phorest-desktop-ember/pull/1692. Please use standard Ember Data patterns instead of this as ds-improved-ajax was an experiment that has since been abandoned.
+
+This repo should be considered for deletion.
+
+<hr/>
+
+
 ds-improved-ajax
 ==============================================================================
 
